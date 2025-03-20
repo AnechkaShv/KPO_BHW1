@@ -11,8 +11,4 @@ public interface IAccountManager
     
     void Deposit(Guid accountId, decimal amount, string description, Category categoryId);
     void Withdraw(Guid accountId, decimal amount, string description, Category categoryId);
-    
-
-    //decimal GetBalance(int accountId);
-   // void AttachObserver(IObserver observer);
 }
