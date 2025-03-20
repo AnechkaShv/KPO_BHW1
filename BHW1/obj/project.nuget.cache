@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "84LsNZgy79o=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ann\\RiderProjects\\BHW1\\BHW1\\BHW1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ann\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.0-preview.2.25163.2\\microsoft.extensions.dependencyinjection.10.0.0-preview.2.25163.2.nupkg.sha512",
+    "C:\\Users\\Ann\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0-preview.2.25163.2\\microsoft.extensions.dependencyinjection.abstractions.10.0.0-preview.2.25163.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
+}
