@@ -10,6 +10,9 @@ public class BankAccount : IVisitable
 
     public EventHandler onBalanceChanged;
 
+    public BankAccount()
+    {
+    }
     public BankAccount(string name, decimal balance)
     {
         _id = Guid.NewGuid();

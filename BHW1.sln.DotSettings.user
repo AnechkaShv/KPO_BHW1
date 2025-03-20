@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d8b62f77_002Ddcca_002D4e70_002D83e3_002Dcd0a584c2811/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CreateBankAccount_ShouldAddAccountToManager" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C5F2F28F-60E3-4FC9-8189-973F65C6B87B::net6.0::FinanceFacadeTests.CreateBankAccount_ShouldAddAccountToManager&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::C5F2F28F-60E3-4FC9-8189-973F65C6B87B::net6.0::FinanceFacadeTests.CreateOperation_Income_ShouldDeposit&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::C5F2F28F-60E3-4FC9-8189-973F65C6B87B::net6.0::FinanceFacadeTests.CalculateNetBalance_ShouldReturnCorrectDifference&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

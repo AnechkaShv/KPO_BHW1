@@ -8,14 +8,20 @@ namespace Domain.Patterns.Facades;
 
 public class FinanceFacade
 {
-    private IFinanceManager _financeManager = new FinanceManager();
-    private IEnumerable<IAccountObserver> observers = new List<IAccountObserver>();
+    private IFinanceManager _financeManager;
+    private IEnumerable<IAccountObserver> _observers;
+    
+    public FinanceFacade(IFinanceManager? financeManager = null, IEnumerable<IAccountObserver>? observers = null)
+    {
+        _financeManager = financeManager ?? throw new ArgumentNullException(nameof(financeManager));
+        _observers = observers ?? new List<IAccountObserver>();
+    }
     
 
     public BankAccount CreateBankAccount(string name, decimal balance = 0)
     {
         var account = Factory.CreateBankAccount(name, balance);
-        foreach (var observer in observers)
+        foreach (var observer in _observers)
         {
             account.onBalanceChanged += observer.HandleBalanceChange;
         }

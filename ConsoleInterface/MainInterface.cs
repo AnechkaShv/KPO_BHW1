@@ -2,6 +2,8 @@
 
 using System.Threading.Channels;
 using Domain.Entities;
+using Domain.Patterns.DataExporter;
+using Domain.Patterns.DataImporter;
 using Domain.Patterns.Facades;
 
 namespace Interface
@@ -13,7 +15,7 @@ namespace Interface
         /// </summary>
         /// <param name="zoo"></param>
 
-        public void ShowMenu(FinanceFacade financeFacade)
+        public void ShowMenu(FinanceFacade financeFacade, JsonExporter jsonExporter, CsvExporter csvExporter, CsvImporter csvImporter, JsonImporter jsonImporter)
         {
             SayHello();
             Console.WriteLine("Welcome to Bank System!\n");
@@ -26,7 +28,8 @@ namespace Interface
                     new string[]
                     {
                         "1. Create account", "2. Create category", "3. Create operation", "4. Print accounts",
-                        "5. Print categories", "6. Print operations", "7. Exit"
+                        "5. Print categories", "6. Print operations", "7. Import CSV data", "8. Import Json data",
+                        "9. Export CSV data", "10. Export Json data", "11. Exit"
                     });
                 
                 // Getting user's choice.
@@ -164,13 +167,38 @@ namespace Interface
                             Console.WriteLine($"{op.Id}: Type - {op.EntityType}; Amount - {op.Amount}; Date - {op.Date}");
                         }
                         break;
+                    // Import csv data
                     case 7:
+                        Console.WriteLine("Enter file path: ");
+                        string csvfilePath = Console.ReadLine();
+                        csvImporter.Import(csvfilePath, financeFacade);
+                        break;
+                    // Import json
+                    case 8:
+                        Console.WriteLine("Enter file path: ");
+                        string jsonfilePath = Console.ReadLine();
+                        jsonImporter.Import(jsonfilePath, financeFacade);
+                        break;
+                    
+                    // Export Csv
+                    case 9:
+                        Console.WriteLine("Enter file path: ");
+                        string csvExportFilePath = Console.ReadLine();
+                        csvExporter.Export(financeFacade, csvExportFilePath);
+                        break;
+                    
+                    //Export json
+                    case 10:
+                        Console.WriteLine("Enter file path: ");
+                        string jsonExportFilePath = Console.ReadLine();
+                        jsonExporter.Export(financeFacade, jsonExportFilePath);
+                        break;
+                    case 11:
                         exit = true;
                         break;
-
                 }
 
-                if (num != 7)
+                if (num != 11)
                 {
                     Menu isContinue = new Menu("Do you want to exit?", new string[] { "1. Yes", "2. No" });
                     if (isContinue.ActMenu() == 1)

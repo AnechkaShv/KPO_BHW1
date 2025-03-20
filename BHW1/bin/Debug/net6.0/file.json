@@ -1,0 +1,10 @@
+BankAccounts:
+Id,Name,Balance
+ee15bae5-f714-45a8-9f96-0d6029bad1e5,ann,0
+
+Categories: 
+Id,Type,Name
+4b93e3f5-a658-4350-841b-910c5d7b3338,Income,cat
+
+Operations:
+Id,Type,BankAccountId,Amount,Date,Description,CategoryId

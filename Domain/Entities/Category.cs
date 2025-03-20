@@ -9,6 +9,7 @@ public class Category : IVisitable
     private EntityType _entityType;
     private string _name;
 
+    public Category(){}
     public Category(EntityType entityType, string name)
     {
         _id = Guid.NewGuid();
